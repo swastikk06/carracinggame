@@ -68,11 +68,16 @@ class Game {
         y = displayHeight - allPlayers[plr].distance;
         cars[index-1].x = x;
         cars[index-1].y = y;
-
+        
         if (index === player.index){
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
+        stroke(10);
+        fill("green");
+        ellipse(x,y,60,60);
+        fill("yellow");
+        text(player.name,x-20,y-50);
         }
        
         //textSize(15);
